@@ -1,0 +1,53 @@
+.flex {
+    display: flex;
+}
+
+.home_img {
+
+    background-image: url(../image/home.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    filter: brightness(0.9);
+
+}
+
+.main {
+    margin-left: 350px;
+    height: 400px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+    color: white;
+}
+
+.inp {
+    height: 70px;
+    width: 550px;
+    font-size: 20px;
+    background-color: white;
+    text-align: start;
+    position: relative;
+    border: none;
+}
+
+.btn {
+    height: 70px;
+    width: 120px;
+    background-color: #ffc300;
+    font-size: 24px;
+    border: none;
+    position: absolute;
+    margin-left: 550px;
+
+
+
+}
+
+.subname {
+    display: flex;
+
+}

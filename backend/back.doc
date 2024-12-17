@@ -1,0 +1,107 @@
+1. Download and install nodejs
+https://nodejs.org/en/download/prebuilt-installer
+
+2. Check node and npm version
+cmd:>node -v 
+cmd:>npm -v 
+
+3. Created Node folder and also create session1 folder inside node folder
+
+4. create index.js file inside session1 directory
+
+5. to run node 
+cmd:>node index.js
+
+6. create package.json 
+cmd:>npm init or npm init -y
+
+7. install nodemon 
+cmd:>npm i nodemon 
+
+8. create script to run app in package.json 
+
+"scripts":{
+    "start":"nodemon index.js"
+}
+1. Install babel
+cmd:> npm i @babel/node @babel/cli @babel/core @babel/preset-env 
+
+2. update package.json
+
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+
+  also, update scripts in package.json
+
+    "scripts":{
+      "start": "nodemon --exec babel-node index.js" 
+    }
+
+Install express
+cmd:>npm i express
+
+install mongoose
+npm i mongoose
+//03045e
+//000814  black
+//001d3d dark blue
+//003566  blue
+//ffc300  yellow
+//light yello  ffd60a
+
+
+import React, { useState } from 'react';
+
+const SearchBar = () => {
+  // State to store the value of the search input
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Function to handle the search action when the button is clicked
+  const handleSearch = () => {
+    alert(`Searching for: ${searchQuery}`);
+  };
+
+  return (
+    <div style={{ textAlign: 'center', padding: '20px' }}>
+      <h3>Search for Jobs or Items</h3>
+      <div>
+        {/* Search Input Field */}
+        <input
+          type="text"
+          placeholder="Enter search query"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)} // Update the searchQuery state
+          style={{
+            padding: '10px',
+            fontSize: '16px',
+            marginRight: '10px',
+            width: '300px',
+            borderRadius: '5px',
+            border: '1px solid #ccc',
+          }}
+        />
+
+        {/* Search Button */}
+        <button
+          onClick={handleSearch} // Trigger search when button is clicked
+          style={{
+            padding: '10px 20px',
+            fontSize: '16px',
+            cursor: 'pointer',
+            border: 'none',
+            borderRadius: '5px',
+            backgroundColor: '#007bff',
+            color: '#fff',
+          }}
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default SearchBar;
